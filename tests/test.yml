@@ -4,3 +4,5 @@
   roles:
     - ansible-role-java
   vars:
+    java_oracle_packages:
+      - version: 8
