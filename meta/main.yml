@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Roman Paska
+  description: Install Java.
+  company: Lemberg Solutions
+  license: MIT
+  min_ansible_version: 2.3
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+  galaxy_tags:
+    - development
+    - java
+dependencies: []

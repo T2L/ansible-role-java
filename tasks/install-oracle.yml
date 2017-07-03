@@ -1,0 +1,27 @@
+---
+# Add the Oracle Java (JDK) 8/9 Installer PPA. See https://launchpad.net/~webupd8team/+archive/ubuntu/java
+- name: Add the Oracle Java (JDK) 8/9 Installer PPA
+  apt_repository:
+    repo: ppa:webupd8team/java
+    state: present
+    update_cache: yes
+
+# Accept Oracle license.
+- name: Accept license
+  debconf:
+    name: oracle-java{{ item.version }}-installer
+    question: shared/accepted-oracle-license-v1-1
+    answer: 'true'
+    vtype: select
+  with_items:
+    "{{ java_oracle_packages }}"
+
+# Install Oracle Java.
+- name: Install Oracle Java
+  apt:
+    name: oracle-java{{ item.version }}-installer
+    state: present
+    update_cache: yes
+    cache_valid_time: 86400
+  with_items:
+    "{{ java_oracle_packages }}"
