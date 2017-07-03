@@ -2,14 +2,14 @@
 
 [![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.0.0)](https://travis-ci.org/T2L/ansible-role-java)
 
-Installs Java on Ubuntu LTS using [OpenJDK builds PPA](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) and/or (Oracle Java (JDK) 8/9 Installer PPA)[https://launchpad.net/~webupd8team/+archive/ubuntu/java].
+Installs Java on Ubuntu LTS using [OpenJDK builds PPA](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) and/or [Oracle Java (JDK) 8/9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java).
 
 ## What is so special about this Java role
 
 - No need to know actual package name(s). Just follow the instructions below
 - One role to install OpenJDK and Oracle Java at the same time (if configured)
 - Supports Ubuntu 14.04 and 16.04 only
-- Testing with (Molecule)[https://github.com/metacloud/molecule]
+- Testing with [Molecule](https://github.com/metacloud/molecule)
 
 ## Requirements
 
@@ -40,9 +40,11 @@ Default Java to use. Also affects JAVA_HOME environment variable (will be pointi
 - **provider**: Java flavor to use. Possible options are `oracle` or `openjdk`
 - **version**: Default Java version. Possible options 6, 7 or 8 (OpenJDK) and 8 or 9 (Oracle Java)
 
-    java_default_alternative:
-      provider: openjdk
-      version: 8
+```
+java_default_alternative:
+  provider: openjdk
+  version: 8
+```
 
 ## Dependencies
 
