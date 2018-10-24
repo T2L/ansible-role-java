@@ -8,7 +8,7 @@ Installs Java on Ubuntu LTS using [OpenJDK builds PPA](https://launchpad.net/~op
 
 - No need to know actual package name(s). Just follow the instructions below
 - One role to install OpenJDK and Oracle Java at the same time (if configured)
-- Supports Ubuntu 14.04 and 16.04 only
+- Supports Ubuntu 14.04, 16.04 and 18.04 only
 - Testing with [Molecule](https://github.com/metacloud/molecule)
 
 ## Requirements
