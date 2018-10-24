@@ -6,12 +6,16 @@
     state: present
     update_cache: yes
 
+# Set OpenJDK Java packages to install.
+- name: Set OpenJDK Java packages to install
+  set_fact:
+      java_openjdk_packages_names: "{{ java_openjdk_packages_names | default([]) + [ openjdk-{{ item.version }}-{{ item.type }} ] }}"
+  loop: "{{ java_openjdk_packages }}"
+
 # Install OpenJDK Java.
 - name: Install OpenJDK Java
   apt:
-    name: openjdk-{{ item.version }}-{{ item.type }}
+    name: "{{ java_openjdk_packages_names }}"
     state: present
     update_cache: yes
     cache_valid_time: 86400
-  with_items:
-    "{{ java_openjdk_packages }}"
