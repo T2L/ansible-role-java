@@ -20,7 +20,7 @@
 # Set Oracle Java packages to install.
 - name: Set Oracle Java packages to install
   set_fact:
-      java_oracle_packages_names: "{{ java_oracle_packages_names | default([]) + [ oracle-java{{ item.version }}-installer ] }}"
+      java_oracle_packages_names: "{{ java_oracle_packages_names | default([]) }} + [ oracle-java{{ item.version }}-installer ]"
   loop: "{{ java_oracle_packages }}"
 
 # Install Oracle Java.
