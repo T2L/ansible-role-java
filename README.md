@@ -19,13 +19,13 @@ None.
 
 Available variables are listed below, along with examples values (see [defaults/main.yml](defaults/main.yml)):
 
-OpenJDK versions and types to install. OpenJDK currently supports installing JDK 6, 7 and 8. Also, it's possible to install JRE or JDK:
+OpenJDK versions and types to install. OpenJDK currently supports installing JDK 6-11. Also, it's possible to install JRE or JDK:
 
     java_openjdk_packages:
       - version: 8
         type: jre
 
-Oracle Java versions to install. Oracle Java supports installing JDK 8 and 9. It's not possible to select package type. Only the **version** key is supported, possible values are 8 and 9.
+Oracle Java versions to install. Oracle Java supports installing JDK 8 and 11. It's not possible to select package type. Only the **version** key is supported, possible values are 8 and 11.
 
     java_oracle_packages: []
 
@@ -38,7 +38,7 @@ Example (do not forget to remove square brackets):
 Default Java to use. Also affects JAVA_HOME environment variable (will be pointing to the same location). Possible keys:
 
 - **provider**: Java flavor to use. Possible options are `oracle` or `openjdk`
-- **version**: Default Java version. Possible options 6, 7 or 8 (OpenJDK) and 8 or 9 (Oracle Java)
+- **version**: Default Java version. Possible options 6-11 (OpenJDK) (however not every Java version is supported for every Ubuntu version) and 8 or 11 (Oracle Java)
 
 ```
 java_default_alternative:

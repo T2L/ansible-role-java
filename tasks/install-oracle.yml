@@ -1,13 +1,13 @@
 ---
-# Add the Oracle Java (JDK) 8/9 Installer PPA. See https://launchpad.net/~webupd8team/+archive/ubuntu/java
-- name: Add the Oracle Java (JDK) 8/9 Installer PPA
+# Add the Oracle Java (JDK) 8 Installer PPA. See https://launchpad.net/~webupd8team/+archive/ubuntu/java
+- name: Add the Oracle Java (JDK) 8 Installer PPA
   apt_repository:
     repo: ppa:webupd8team/java
     state: present
     update_cache: yes
 
-# Accept Oracle license.
-- name: Accept license
+# Accept Oracle license (JDK) 8.
+- name: Accept license  (JDK) 8
   debconf:
     name: oracle-java{{ item.version }}-installer
     question: shared/accepted-oracle-license-v1-1
@@ -15,7 +15,27 @@
     vtype: select
   loop:
     "{{ java_oracle_packages }}"
+  when:
+    item.version == 8
 
+# Add the Oracle Java (JDK) 11 Installer PPA. See https://launchpad.net/~linuxuprising/+archive/ubuntu/java
+- name: Add the Oracle Java (JDK) 11 Installer PPA
+  apt_repository:
+    repo: ppa:linuxuprising/java
+    state: present
+    update_cache: yes
+
+# Accept Oracle license (JDK) 11.
+- name: Accept license  (JDK) 11
+  debconf:
+    name: oracle-java{{ item.version }}-installer
+    question: shared/accepted-oracle-license-v1-2
+    answer: 'true'
+    vtype: select
+  loop:
+    "{{ java_oracle_packages }}"
+  when:
+    item.version == 11
 
 # Set Oracle Java packages to install.
 - name: Set Oracle Java packages to install

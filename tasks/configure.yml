@@ -1,22 +1,28 @@
 ---
 # Get path to Java based on passed default alternative.
-- name: Get default Java path (OpenJDK)
+- name: Get default Java path (OpenJDK 7-8)
   set_fact:
     java_default_path: /usr/lib/jvm/java-{{ java_default_alternative.version }}-{{ java_default_alternative.provider }}-amd64/jre/bin/java
   when:
-    java_default_alternative.provider == 'openjdk'
+    java_default_alternative.provider == 'openjdk' and java_default_alternative.version <= 8
+
+- name: Get default Java path (OpenJDK 9+)
+  set_fact:
+    java_default_path: /usr/lib/jvm/java-{{ java_default_alternative.version }}-{{ java_default_alternative.provider }}-amd64/bin/java
+  when:
+    java_default_alternative.provider == 'openjdk' and java_default_alternative.version >= 9
 
 - name: Get default Java path (Oracle Java 8)
   set_fact:
     java_default_path: /usr/lib/jvm/java-{{ java_default_alternative.version }}-{{ java_default_alternative.provider }}/jre/bin/java
   when:
-    java_default_alternative.provider == 'oracle' and java_default_alternative.version == '8'
+    java_default_alternative.provider == 'oracle' and java_default_alternative.version == 8
 
-- name: Get default Java path (Oracle Java 9)
+- name: Get default Java path (Oracle Java 11)
   set_fact:
     java_default_path: /usr/lib/jvm/java-{{ java_default_alternative.version }}-{{ java_default_alternative.provider }}/bin/java
   when:
-    java_default_alternative.provider == 'oracle' and java_default_alternative.version == '9'
+    java_default_alternative.provider == 'oracle' and java_default_alternative.version == 11
 
 # Set default Java alternative.
 - name: Set default Java

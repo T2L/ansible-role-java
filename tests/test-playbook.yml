@@ -8,7 +8,8 @@
       - version: 8
       - version: 11
     java_openjdk_packages:
-      - version: 8
+      - version: 10
         type: jre
-      - version: 11
-        type: jdk
+    java_default_alternative:
+      provider: openjdk
+      version: 10
