@@ -1,7 +1,4 @@
 ---
-dependency:
-  name: galaxy
-  requirements_file: tests/requirements.yml
 ansible:
   playbook: tests/test-playbook.yml
   ansiblecfg_ssh_connection:
