@@ -1,4 +1,4 @@
-## Ansible Role: Java 2.x.x
+## Ansible Role: Java 1.1.0, 2018-10-24
 
 - Bump minimum Ansible version to 2.5
 - Fixed _Invoking "apt" only once while using a loop via squash_actions is deprecated._

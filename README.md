@@ -1,8 +1,12 @@
 # Ansible Role: Java
 
-[![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.x.x)](https://travis-ci.org/T2L/ansible-role-java)
+[![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.1.0)](https://travis-ci.org/T2L/ansible-role-java)
 
-Installs Java on Ubuntu LTS using [OpenJDK builds PPA](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) and/or [Oracle Java (JDK) 8/9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java).
+Installs Java on Ubuntu LTS using:
+
+- [OpenJDK builds PPA](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa)
+- [Oracle Java (JDK) 8 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
+- [Oracle Java (JDK) 11 Installer PPA](https://launchpad.net/~linuxuprising/+archive/ubuntu/java)
 
 ## What is so special about this Java role
 
