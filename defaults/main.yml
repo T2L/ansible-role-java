@@ -1,17 +1,17 @@
 ---
 # Open JDK version(s) and package type (jre or jdk).
-# Currently supported versions are 6-11 (however not every Java version is
+# Currently supported versions are 6-13 (however not every Java version is
 # supported for every Ubuntu version).
 java_openjdk_packages:
-  - version: 8
+  - version: 11
     type: jre
 
 # Oracle Java version(s).
-# Currently supported versions are 8 and 11.
+# Currently supported version is 13.
 java_oracle_packages: []
-#  - version: 8
+#  - version: 13
 
 # Java default alternative. Responsible for setting JAVA_HOME as well.
 java_default_alternative:
   provider: openjdk
-  version: 8
+  version: 11

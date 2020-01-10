@@ -17,7 +17,10 @@
     java_oracle_packages:
       - version: 13
     java_openjdk_packages:
-      - version: lts
+      - version: 11
+        type: jre
+      - version: 13
+        type: jdk
     java_default_alternative:
       provider: openjdk
-      version: lts
+      version: 11
