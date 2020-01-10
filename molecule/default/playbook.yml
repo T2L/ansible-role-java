@@ -15,15 +15,9 @@
 
   vars:
     java_oracle_packages:
-      - version: 11
       - version: 13
     java_openjdk_packages:
-      - version: 9
-        type: jre
       - version: lts
-        type: jdk
-      - version: 13
-        type: jre
     java_default_alternative:
       provider: openjdk
       version: lts
