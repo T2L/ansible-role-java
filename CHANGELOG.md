@@ -2,6 +2,7 @@
 
 - Dropped support of Oracle Java 11 (cannot be used without an Oracle account) and replaced it with Oracle Java 13
 - Add support for OpenJDK 12 and 13 (not for all Ubuntu versions)
+- Set OpenJDK Java 11 JRE as default
 
 ## Ansible Role: Java 1.1.0, 2018-10-24
 
