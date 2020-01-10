@@ -1,3 +1,8 @@
+## Ansible Role: Java 1.x.x
+
+- Dropped support of Oracle Java 11 (cannot be used without an Oracle account) and replaced it with Oracle Java 13
+- Add support for OpenJDK 12 and 13 (not for all Ubuntu versions)
+
 ## Ansible Role: Java 1.1.0, 2018-10-24
 
 - Bump minimum Ansible version to 2.5

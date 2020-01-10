@@ -5,11 +5,9 @@
     - ansible-role-java
   vars:
     java_oracle_packages:
-      - version: 8
-      - version: 11
+      - version: 13
     java_openjdk_packages:
-      - version: 8
-        type: jre
+      - version: lts
     java_default_alternative:
       provider: openjdk
-      version: 8
+      version: lts
