@@ -22,12 +22,13 @@ None.
 
 Available variables are listed below, along with examples values (see [defaults/main.yml](defaults/main.yml)):
 
-OpenJDK versions and types to install. OpenJDK currently supports installing JDK 6-13. Not every JDK version is supported for every Ubuntu  version. Refer to the [PPA page](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) for more details. Also, please note that OpenJDK 11 is actually versioned as LTS:
+OpenJDK versions and types to install. OpenJDK currently supports installing JDK 6-13. Not every JDK version is supported for every Ubuntu  version. Refer to the [PPA page](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) for more details. Also, it's possible to install JRE or JDK::
 
     java_openjdk_packages:
-      - version: lts
+      - version: 11
+        type: jre
 
-Oracle Java versions to install. Oracle Java supports installing JDK 13 only:
+Oracle Java versions to install. Oracle Java supports installing JDK 13 only. It's not possible to select package type. Only the version key is supported:
 
     java_oracle_packages: []
 
@@ -35,7 +36,7 @@ Oracle Java versions to install. Oracle Java supports installing JDK 13 only:
 Example (do not forget to remove square brackets):
 
     java_oracle_packages:
-      - version: 8
+      - version: 13
 
 Default Java to use. Also affects JAVA_HOME environment variable (will be pointing to the same location). Possible keys:
 
@@ -45,7 +46,7 @@ Default Java to use. Also affects JAVA_HOME environment variable (will be pointi
 ```
 java_default_alternative:
   provider: openjdk
-  version: lts
+  version: 11
 ```
 
 ## Dependencies
