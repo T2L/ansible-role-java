@@ -11,12 +11,12 @@
 # Install OpenJDK.
 - include: install-openjdk.yml
   when:
-    java_openjdk_packages
+    java_openjdk_packages | length > 0
 
 # Install Oracle Java.
 - include: install-oracle.yml
   when:
-    java_oracle_packages
+    java_oracle_packages | length > 0
 
 # Configure default alternative and JAVA_HOME.
 - include: configure.yml
