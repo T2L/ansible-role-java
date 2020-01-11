@@ -5,6 +5,7 @@ lint:
   name: yamllint
   options:
     config-data:
+      extends: default
       rules:
         line-length: disable
 platforms:
@@ -26,9 +27,5 @@ provisioner:
       remote_tmp: /tmp/ansible
     ssh_connection:
       pipelining: true
-  inventory:
-    group_vars:
-      all:
-        solr_version: ${SOLR_VERSION}
   lint:
     name: ansible-lint
