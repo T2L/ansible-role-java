@@ -4,12 +4,12 @@
   apt_repository:
     repo: ppa:openjdk-r/ppa
     state: present
-    update_cache: yes
+    update_cache: true
 
 # Set OpenJDK Java packages to install.
 - name: Set OpenJDK Java packages to install
   set_fact:
-      java_openjdk_packages_names: "{{ java_openjdk_packages_names | default([]) }} + [ 'openjdk-{{ item.version }}-{{ item.type }}' ]"
+    java_openjdk_packages_names: "{{ java_openjdk_packages_names | default([]) }} + [ 'openjdk-{{ item.version }}-{{ item.type }}' ]"
   loop: "{{ java_openjdk_packages }}"
 
 # Install OpenJDK Java.
@@ -17,5 +17,5 @@
   apt:
     name: "{{ java_openjdk_packages_names }}"
     state: present
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 86400
