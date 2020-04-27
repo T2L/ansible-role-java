@@ -16,7 +16,7 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
     java_oracle_packages:
-      - version: 13
+      - version: 14
     java_openjdk_packages:
       - version: 11
         type: jre
