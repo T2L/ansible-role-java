@@ -12,11 +12,11 @@
   when:
     java_default_alternative.provider == 'openjdk' and java_default_alternative.version >= 9
 
-- name: Get default Java path (Oracle Java 13)
+- name: Get default Java path (Oracle Java 14)
   set_fact:
     java_default_path: /usr/lib/jvm/java-{{ java_default_alternative.version }}-{{ java_default_alternative.provider }}/bin/java
   when:
-    java_default_alternative.provider == 'oracle' and java_default_alternative.version == 13
+    java_default_alternative.provider == 'oracle' and java_default_alternative.version == 14
 
 # Set default Java alternative.
 - name: Set default Java
