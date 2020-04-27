@@ -1,3 +1,7 @@
+## Ansible Role: Java (unreleased)
+
+- [#9](https://github.com/T2L/ansible-role-java/issues/9) - Add Molecule 3 support
+
 ## Ansible Role: Java 1.2.0, 2020-01-11
 
 - Dropped support of Oracle Java 11 (cannot be used without an Oracle account) and replaced it with Oracle Java 13

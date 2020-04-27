@@ -5,7 +5,7 @@ jobs:
   include:
     - &Test
 
-      name: Ubuntu 14.04 / Ansible 2.7
+      name: Ubuntu 16.04 / Ansible 2.8
 
       os: linux
 
@@ -18,19 +18,13 @@ jobs:
 
       python: 3.6
 
-      env: MOLECULE_PLATFORM=ubuntu:14.04 ANSIBLE_VERSION=2.7.*
+      env: MOLECULE_PLATFORM=ubuntu:16.04 ANSIBLE_VERSION=2.8.*
 
       install:
-        - pip install ansible==${ANSIBLE_VERSION} docker molecule
+        - pip install ansible==${ANSIBLE_VERSION} ansible-lint docker molecule==3.*
 
       script:
         - molecule test
-
-    - <<: *Test
-
-      name: Ubuntu 16.04 / Ansible 2.8
-
-      env: MOLECULE_PLATFORM=ubuntu:18.04 ANSIBLE_VERSION=2.8.*
 
     - <<: *Test
 
