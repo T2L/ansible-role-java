@@ -1,13 +1,10 @@
 ---
 driver:
   name: docker
-lint:
-  name: yamllint
-  options:
-    config-data:
-      extends: default
-      rules:
-        line-length: disable
+lint: |
+  set -e
+  yamllint --config-data "{extends: default, rules: {line-length: disable}}" .
+  ansible-lint
 platforms:
   - name: draft
     image: "${MOLECULE_PLATFORM}"
@@ -27,5 +24,3 @@ provisioner:
       remote_tmp: /tmp/ansible
     ssh_connection:
       pipelining: true
-  lint:
-    name: ansible-lint
