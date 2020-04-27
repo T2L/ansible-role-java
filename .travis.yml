@@ -32,5 +32,11 @@ jobs:
 
       env: MOLECULE_PLATFORM=ubuntu:18.04 ANSIBLE_VERSION=2.9.*
 
+    - <<: *Test
+
+      name: Ubuntu 20.04 / Ansible 2.9
+
+      env: MOLECULE_PLATFORM=ubuntu:20.04 ANSIBLE_VERSION=2.9.*
+
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
