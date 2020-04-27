@@ -1,5 +1,6 @@
 ## Ansible Role: Java (unreleased)
 
+- [#13](https://github.com/T2L/ansible-role-java/issues/13) - Add Ubuntu 20.04 support
 - [#11](https://github.com/T2L/ansible-role-java/issues/11) - OpenJDK 13 is no longer supported, replaced with JDK 14
 - [#9](https://github.com/T2L/ansible-role-java/issues/9) - Add Molecule 3 support
 
