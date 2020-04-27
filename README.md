@@ -1,6 +1,6 @@
 # Ansible Role: Java
 
-[![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.2.0)](https://travis-ci.org/T2L/ansible-role-java)
+[![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.3.0)](https://travis-ci.org/T2L/ansible-role-java)
 
 Installs Java on Ubuntu LTS using:
 
@@ -12,7 +12,7 @@ Installs Java on Ubuntu LTS using:
 - No need to know actual package name(s). Just follow the instructions below
 - One role to install OpenJDK and Oracle Java at the same time (if configured)
 - Supports Ubuntu 14.04, 16.04, 18.04 and 20.04 only
-- Testing with [Molecule](https://github.com/metacloud/molecule)
+- Testing with [Molecule 3](https://github.com/ansible-community/molecule)
 
 ## Requirements
 
