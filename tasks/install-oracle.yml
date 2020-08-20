@@ -5,6 +5,7 @@
     repo: ppa:linuxuprising/java
     state: present
     update_cache: true
+    mode: 0644
 
 # Accept Oracle license (JDK) 14.
 - name: Accept license  (JDK) 14

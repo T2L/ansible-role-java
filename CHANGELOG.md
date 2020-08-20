@@ -1,3 +1,7 @@
+## Ansible Role: Java (Unreleased)
+
+- [#16](https://github.com/T2L/ansible-role-java/issues/16) - Address newly introduced Ansible Lint "[208] File permissions not mentioned" message. Update Travis configuration (new Ansible version)
+
 ## Ansible Role: Java 1.3.0, 2020-04-27
 
 - [#13](https://github.com/T2L/ansible-role-java/issues/13) - Add Ubuntu 20.04 support
