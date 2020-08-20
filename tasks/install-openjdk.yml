@@ -5,6 +5,7 @@
     repo: ppa:openjdk-r/ppa
     state: present
     update_cache: true
+    mode: 0644
 
 # Set OpenJDK Java packages to install.
 - name: Set OpenJDK Java packages to install
