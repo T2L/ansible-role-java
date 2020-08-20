@@ -1,6 +1,6 @@
 # Ansible Role: Java
 
-[![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.3.0)](https://travis-ci.org/T2L/ansible-role-java)
+[![Build Status](https://travis-ci.org/T2L/ansible-role-java.svg?branch=1.x.x)](https://travis-ci.org/T2L/ansible-role-java)
 
 Installs Java on Ubuntu LTS using:
 
