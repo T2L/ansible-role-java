@@ -1,14 +1,14 @@
 ---
-# Add the Oracle Java (JDK) 14 Installer PPA. See https://launchpad.net/~linuxuprising/+archive/ubuntu/java
-- name: Add the Oracle Java (JDK) 14 Installer PPA
+# Add the Oracle Java (JDK) 15 Installer PPA. See https://launchpad.net/~linuxuprising/+archive/ubuntu/java
+- name: Add the Oracle Java (JDK) 15 Installer PPA
   apt_repository:
     repo: ppa:linuxuprising/java
     state: present
     update_cache: true
     mode: 0644
 
-# Accept Oracle license (JDK) 14.
-- name: Accept license  (JDK) 14
+# Accept Oracle license (JDK) 15.
+- name: Accept license  (JDK) 15
   debconf:
     name: oracle-java{{ item.version }}-installer
     question: shared/accepted-oracle-license-v1-2
@@ -17,7 +17,7 @@
   loop:
     "{{ java_oracle_packages }}"
   when:
-    item.version == 14
+    item.version == 15
 
 # Set Oracle Java packages to install.
 - name: Set Oracle Java packages to install
