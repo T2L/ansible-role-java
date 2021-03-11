@@ -22,7 +22,7 @@ None.
 
 Available variables are listed below, along with examples values (see [defaults/main.yml](defaults/main.yml)):
 
-OpenJDK versions and types to install. OpenJDK currently supports installing JDK 6-15. Not every JDK version is supported for every Ubuntu  version. Refer to the [PPA page](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) for more details. Also, it's possible to install JRE or JDK:
+OpenJDK versions and types to install. OpenJDK currently supports installing JDK 6-17. Not every JDK version is supported for every Ubuntu  version. Refer to the [PPA page](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa) for more details. Also, it's possible to install JRE or JDK:
 
     java_openjdk_packages:
       - version: 11
@@ -41,7 +41,7 @@ Example (do not forget to remove square brackets):
 Default Java to use. Also affects JAVA_HOME environment variable (will be pointing to the same location). Possible keys:
 
 - **provider**: Java flavor to use. Possible options are `oracle` or `openjdk`
-- **version**: Default Java version. Possible options 6-15 (OpenJDK) (however not every Java version is supported for every Ubuntu version) and 15 (Oracle Java)
+- **version**: Default Java version. Possible options 6-17 (OpenJDK) (however not every Java version is supported for every Ubuntu version) and 15 (Oracle Java)
 
 ```
 java_default_alternative:
@@ -65,7 +65,7 @@ MIT
 
 ## Author Information
 
-This role was created in 2017-2020 by Roman Paska.
+This role was created in 2017-2021 by Roman Paska.
 
 ## Changelog
 

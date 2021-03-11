@@ -1,6 +1,6 @@
 ---
 # Open JDK version(s) and package type (jre or jdk).
-# Currently supported versions are 6-15 (however not every Java version is
+# Currently supported versions are 6-17 (however not every Java version is
 # supported for every Ubuntu version).
 java_openjdk_packages:
   - version: 11

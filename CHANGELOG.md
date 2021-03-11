@@ -1,7 +1,8 @@
 ## Ansible Role: Java 1.x.x (Unreleased)
 
+- [#20](https://github.com/T2L/ansible-role-java/pull/20) - Make Travis CI green again
 - [#16](https://github.com/T2L/ansible-role-java/issues/18) - Oracle Java 14 is no longer supported, replaced it with version 15
--
+
 ## Ansible Role: Java 1.3.1, 2020-08-20
 
 - [#16](https://github.com/T2L/ansible-role-java/issues/16) - Address newly introduced Ansible Lint "[208] File permissions not mentioned" message. Update Travis configuration (new Ansible version)
