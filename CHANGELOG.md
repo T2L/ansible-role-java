@@ -1,3 +1,7 @@
+## Ansible Role: Java (Unreleased)
+
+- Explicitly require yamllint on Travis CI
+
 ## Ansible Role: Java 1.3.2, 2021-03-11
 
 - [#20](https://github.com/T2L/ansible-role-java/pull/20) - Make Travis CI green again
