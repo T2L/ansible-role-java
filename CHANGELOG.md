@@ -1,5 +1,6 @@
 ## Ansible Role: Java (Unreleased)
 
+- [#21](https://github.com/T2L/ansible-role-java/issues/21) - Oracle Java 15 is no longer supported, replaced it with version 16
 - Explicitly require yamllint on Travis CI
 
 ## Ansible Role: Java 1.3.2, 2021-03-11

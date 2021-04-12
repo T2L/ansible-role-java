@@ -7,9 +7,9 @@ java_openjdk_packages:
     type: jre
 
 # Oracle Java version(s).
-# Currently supported version is 15.
+# Currently supported version is 16.
 java_oracle_packages: []
-#  - version: 15
+#  - version: 16
 
 # Java default alternative. Responsible for setting JAVA_HOME as well.
 java_default_alternative:
