@@ -5,7 +5,7 @@
 Installs Java on Ubuntu LTS using:
 
 - [OpenJDK builds PPA](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa)
-- [Oracle Java (JDK) 15 Installer PPA](https://launchpad.net/~linuxuprising/+archive/ubuntu/java)
+- [Oracle Java (JDK) 16 Installer PPA](https://launchpad.net/~linuxuprising/+archive/ubuntu/java)
 
 ## What is so special about this Java role
 
@@ -28,7 +28,7 @@ OpenJDK versions and types to install. OpenJDK currently supports installing JDK
       - version: 11
         type: jre
 
-Oracle Java versions to install. Oracle Java supports installing JDK 15 only. It's not possible to select package type. Only the version key is supported:
+Oracle Java versions to install. Oracle Java supports installing JDK 16 only. It's not possible to select package type. Only the version key is supported:
 
     java_oracle_packages: []
 
@@ -36,12 +36,12 @@ Oracle Java versions to install. Oracle Java supports installing JDK 15 only. It
 Example (do not forget to remove square brackets):
 
     java_oracle_packages:
-      - version: 15
+      - version: 16
 
 Default Java to use. Also affects JAVA_HOME environment variable (will be pointing to the same location). Possible keys:
 
 - **provider**: Java flavor to use. Possible options are `oracle` or `openjdk`
-- **version**: Default Java version. Possible options 6-17 (OpenJDK) (however not every Java version is supported for every Ubuntu version) and 15 (Oracle Java)
+- **version**: Default Java version. Possible options 6-17 (OpenJDK) (however not every Java version is supported for every Ubuntu version) and 16 (Oracle Java)
 
 ```
 java_default_alternative:
